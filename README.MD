@@ -1,8 +1,8 @@
-ALCPlugFix
+# ALCPlugFix
 -------------
 This is a improved version of ALCPlugFix from [goodwin](https://github.com/goodwin/ALCPlugFix).
 
-The original and this fork trie to fix headphone audio power state issue in non Apple sound card in macOS.
+The original and this fork trie to fix headphone audio power state issue in non Apple sound card in macOS 11.
 
 The improvement include:
 
@@ -12,21 +12,24 @@ The improvement include:
  - Let you choose `hda-verb` so it don't need be in `$PATH`
  - Enable launching as LauchDaemon
  - Bug fix
+ - Use macOS 11 new path to enable this fix 
 
-Install
----
+## Install
+----
 By default it's code command is for Mi notebook pro, you may need to change that in `fixAudio` function.
 
-Running `sh ./install.sh` will install to `/user/local/bin`.
+After my test it could work on XPS 15 9560.
+
+Running `sh ./install.sh` or double click `Install_Double-click.command` will install to `/Library/Apple/usr/bin`.
 
 By default it search `hda-verb` in current work directory, if not found it will search in `$PATH` _(May not work when it is running from LaunchDaemon because it is using as root)_.
 
 
-Build
+# Build
 ----
 `xcodebuild -target ALCPlugFix`
 
-Debug
+# Debug
 ----
 
 Add following to launchDaemon file to log to `/tmp/ALCPlugFix.log`, _(or use `log stream`)_
