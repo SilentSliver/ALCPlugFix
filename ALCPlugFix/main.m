@@ -28,7 +28,7 @@ NSString *binPrefix;
     NSPipe* pipe = [NSPipe pipe];
 
     NSTask* task = [[NSTask alloc] init];
-    [task setLaunchPath: @"/bin/sh"];
+    [task setLaunchPath: @"/bin/zsh"];
     [task setArguments:@[@"-c", [NSString stringWithFormat:@"%@", self]]];
     [task setStandardOutput:pipe];
 
