@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sudo mkdir -p /Library/Apple/usr/bin/
 sudo cp ALCPlugFix /Library/Apple/usr/bin/
 sudo chmod 755 /Library/Apple/usr/bin/ALCPlugFix
 sudo chown $USER:admin /Library/Apple/usr/bin/ALCPlugFix
